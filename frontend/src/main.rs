@@ -2,11 +2,11 @@ use dioxus::prelude::*;
 
 // Startet Dioxus-Anwendung
 fn main() {
-    dioxus::launch(App);
+    dioxus::launch(HabitTracker);
 }
 
 // Hauptkomponente der Benutzeroberfläche
-fn App() -> Element {
+fn HabitTracker() -> Element {
     let paragraph = "Hallo";
 
     rsx! {

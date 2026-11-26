@@ -16,6 +16,13 @@ fn App() -> Element {
             href: asset!("/assets/main.css")
         }
 
-        {paragraph}
+        h1 {
+            "Habit Tracker"
+        }
+        
+        div {
+            class: "content",
+            {paragraph}
+        }
     }
 } 

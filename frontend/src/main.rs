@@ -6,7 +6,7 @@ fn main() {
 }
 
 // Hauptkomponente der Benutzeroberfläche
-fn HabitTracker() -> Element {
+pub fn HabitTracker() -> Element {
     let paragraph = "Hallo";
 
     rsx! {

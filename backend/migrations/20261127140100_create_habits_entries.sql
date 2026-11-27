@@ -17,8 +17,9 @@ CREATE TABLE public.habit_entries (
 
 );
 
-ALTER TABLE public.habit_entries ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.habit_entries ENABLE ROW LEVEL SECURITY; /* Zugriff auf die Tabelle nur für authentifizierte Benutzer */
 
+/* jeder Benutzer kann nur seine eigenen Einträge verwalten */
 CREATE POLICY "Users manage own entries"
 ON public.habit_entries
 FOR ALL 

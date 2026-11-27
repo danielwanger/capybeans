@@ -12,7 +12,7 @@ CREATE TABLE public.habits (
 
 ALTER TABLE public.habits ENABLE ROW LEVEL SECURITY;
 
-CREAT POLICY "Users mange own habits"
+CREATE POLICY "Users manage own habits"
 ON public.habits
 FOR ALL
 TO authenticated

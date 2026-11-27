@@ -13,7 +13,7 @@ CREATE TABLE public.habit_entries (
 
     FOREIGN KEY (habit_id, user_id),
         REFERENCES public.habit(id, user_id)
-        ON DELETE CASECADE
+        ON DELETE CASCADE
 
 );
 

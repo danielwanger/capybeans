@@ -16,3 +16,5 @@ sqlx = {version = "0.8", features = [
 
 tokio = {version = "1", features = ["full"]}
 dotenvy = "0.15"
+uuid = "1.29.3"
+chrono = "0.4.45"

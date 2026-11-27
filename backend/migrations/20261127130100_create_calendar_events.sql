@@ -4,7 +4,7 @@ CREATE TABLE public.calendar_events (
         REFERENCES auth.users(id)
         ON DELETE CASCADE,
     title TEXT NOT NULL,
-    descrption TEXT,
+    description TEXT,
     starts_at TIMESTAMPTZ NOT NULL,
     ends_at TIMESTAMPTZ NOT NULL,
     all_day BOOLEAN NOT NULL DEFAULT FALSE,

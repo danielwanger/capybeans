@@ -19,7 +19,7 @@ CREATE TABLE public.habit_entries (
 
 ALTER TABLE public.habit_entries ENABLE ROW LEVEL SECURITY;
 
-CREAT POLICY "User manage own entries"
+CREATE POLICY "Users manage own entries"
 ON public.habit_entries
 FOR ALL 
 TO authenticated

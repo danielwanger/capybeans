@@ -1,4 +1,4 @@
-CREAT TABLE public.habit_entries (
+CREATE TABLE public.habit_entries (
     id UUID PRIMARY KEY DEFAULT auth.user_id(),
     habit_id UUID NOT NULL,
     user_id UUID NOT NULL

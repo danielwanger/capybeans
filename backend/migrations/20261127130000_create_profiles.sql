@@ -7,8 +7,9 @@ CREATE TABLE public.profiles (
 
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
 
+/* jeder User darf nur sein eigenes Profil verwalten */
 CREATE POLICY "Users manage own profile"
-ON public profiles
+ON public.profiles
 FOR ALL
 TO authenticated
 USING ((SELECT auth.uid()) = id)

@@ -1,7 +1,7 @@
 CREATE TABLE public.habits (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL /* ist für Superbase */
-        REFERENCES auth.user(id)
+        REFERENCES auth.users(id)
         ON DELETE CASCADE,
          
     name TEXT NOT NULL,

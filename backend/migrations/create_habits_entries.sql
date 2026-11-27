@@ -2,7 +2,7 @@ CREATE TABLE public.habit_entries (
     id UUID PRIMARY KEY DEFAULT auth.user_id(),
     habit_id UUID NOT NULL,
     user_id UUID NOT NULL
-        REFERENCES auth:user_id(id)
+        REFERENCES auth.user_id(id)
         ON DELETE CASCADE,
 
     entry_date DATE NOT NULL,

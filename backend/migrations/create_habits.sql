@@ -10,7 +10,7 @@ CREATE TABLE public.habits (
     UNIQUE (id, user_id)
 );
 
-ALERT TABLE public.habits ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.habits ENABLE ROW LEVEL SECURITY;
 
 CREAT POLICY "Users mange own habits"
 ON public.habits

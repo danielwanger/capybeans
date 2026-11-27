@@ -2,7 +2,7 @@ CREATE TABLE public.habits (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL
         REFERENCES auth.users(id)
-        ON DELETE CASECADE;
+        ON DELETE CASCADE,
          
     name TEXT NOT NULL,
     description TEXT NOT NULL,

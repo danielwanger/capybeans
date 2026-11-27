@@ -3,11 +3,12 @@ mod db;
 use sqlx::postgres::PgPoolOptions;
 
 #[tokio::main]
-async fn main() -> Result<(), sqlx::Error> {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenvy::dotenv().ok();
     let url = std::env::var("DATABASE_URL").expect("DATABASE_URL fehlt in .env");
     let pool = PgPoolOptions::new().max_connections(5).connect(&url).await?;
-    let row: (i32,) = sqlx::query_as("SELECT 1").fetch_one(&pool).await?;
-    println!("Verbindung ok: {}", row.0);
+    
+    sqlx::migrate! ("./migrations").run(&pool).await?;
+    println!("Migrationen angewendet");
     Ok(())
 }

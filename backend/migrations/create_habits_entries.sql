@@ -12,7 +12,7 @@ CREATE TABLE public.habit_entries (
     UNIQUE (habit_id, entry_date),
 
     FOREIGN KEY (habit_id, user_id),
-        REFERENCES public.habit(id, user_id)
+        REFERENCES public.habits(id, user_id)
         ON DELETE CASCADE
 
 );

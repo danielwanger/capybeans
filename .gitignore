@@ -1,3 +1,5 @@
 /target
 backend/data/*
 !backend/data/.gitkeep
+
+.env
